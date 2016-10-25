@@ -1,0 +1,4 @@
+tig*.tar.gz
+mock_build.log
+mock_srpm.log
+results

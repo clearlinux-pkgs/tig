@@ -4,7 +4,7 @@
 #
 Name     : tig
 Version  : 2.2
-Release  : 1
+Release  : 2
 URL      : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Source0  : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Summary  : Tig: text-mode interface for git
@@ -16,6 +16,7 @@ BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(ncurses)
 BuildRequires : readline-dev
 BuildRequires : xmlto
+Patch1: timestamp.patch
 
 %description
 Tig is a git repository browser that additionally can act as a pager
@@ -37,13 +38,16 @@ bin components for the tig package.
 
 %prep
 %setup -q -n tig-2.2
+%patch1 -p1
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484451544
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
 %install
+export SOURCE_DATE_EPOCH=1484451544
 rm -rf %{buildroot}
 %make_install
 

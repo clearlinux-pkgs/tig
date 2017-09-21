@@ -4,18 +4,17 @@
 #
 Name     : tig
 Version  : 2.2
-Release  : 5
+Release  : 6
 URL      : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Source0  : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Summary  : Tig: text-mode interface for git
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: tig-bin
-BuildRequires : asciidoc
+Requires: tig-doc
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(ncurses)
 BuildRequires : readline-dev
-BuildRequires : xmlto
 Patch1: timestamp.patch
 
 %description
@@ -36,20 +35,37 @@ Group: Binaries
 bin components for the tig package.
 
 
+%package doc
+Summary: doc components for the tig package.
+Group: Documentation
+
+%description doc
+doc components for the tig package.
+
+
 %prep
 %setup -q -n tig-2.2
 %patch1 -p1
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1484451544
+export SOURCE_DATE_EPOCH=1506017481
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1484451544
+export SOURCE_DATE_EPOCH=1506017481
 rm -rf %{buildroot}
 %make_install
+## make_install_append content
+mkdir -p %{buildroot}/usr/share/man/man{1,5,7}
+cp tig.1 %{buildroot}/usr/share/man/man1/
+cp tigrc.5 %{buildroot}/usr/share/man/man5/
+cp tigmanual.7 %{buildroot}/usr/share/man/man7/
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -57,3 +73,9 @@ rm -rf %{buildroot}
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/tig
+
+%files doc
+%defattr(-,root,root,-)
+%doc /usr/share/man/man1/*
+%doc /usr/share/man/man5/*
+%doc /usr/share/man/man7/*

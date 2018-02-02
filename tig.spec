@@ -4,7 +4,7 @@
 #
 Name     : tig
 Version  : 2.2
-Release  : 6
+Release  : 7
 URL      : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Source0  : http://jonas.nitro.dk/tig/releases/tig-2.2.tar.gz
 Summary  : Tig: text-mode interface for git

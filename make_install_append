@@ -1,4 +1,0 @@
-mkdir -p %{buildroot}/usr/share/man/man{1,5,7}
-cp tig.1 %{buildroot}/usr/share/man/man1/
-cp tigrc.5 %{buildroot}/usr/share/man/man5/
-cp tigmanual.7 %{buildroot}/usr/share/man/man7/

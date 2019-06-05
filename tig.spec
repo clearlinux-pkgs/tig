@@ -4,7 +4,7 @@
 #
 Name     : tig
 Version  : 2.4.1
-Release  : 9
+Release  : 10
 URL      : https://github.com/jonas/tig/releases/download/tig-2.4.1/tig-2.4.1.tar.gz
 Source0  : https://github.com/jonas/tig/releases/download/tig-2.4.1/tig-2.4.1.tar.gz
 Summary  : Tig: text-mode interface for git

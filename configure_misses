@@ -1,0 +1,7 @@
+Configure miss: whether environ is declared
+Configure miss: working ncursesw/curses.h
+Configure miss: working ncursesw.h
+Configure miss: tgetent
+Configure miss: gsed
+Configure miss: xmlto
+Configure miss: docbook2pdf

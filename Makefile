@@ -1,5 +1,5 @@
 PKG_NAME := tig
-URL = https://github.com/jonas/tig/releases/download/tig-2.5.2/tig-2.5.2.tar.gz
+URL = https://github.com/jonas/tig/releases/download/tig-2.5.3/tig-2.5.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

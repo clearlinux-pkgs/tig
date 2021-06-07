@@ -1,7 +1,8 @@
-Configure miss: whether environ is declared
-Configure miss: working ncursesw/curses.h
-Configure miss: working ncursesw.h
-Configure miss: tgetent
-Configure miss: gsed
-Configure miss: xmlto
 Configure miss: docbook2pdf
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gsed
+Configure miss: tgetent
+Configure miss: whether environ is declared
+Configure miss: working ncursesw.h
+Configure miss: working ncursesw/curses.h
+Configure miss: xmlto

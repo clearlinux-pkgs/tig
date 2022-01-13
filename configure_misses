@@ -1,6 +1,8 @@
 Configure miss: docbook2pdf
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gsed
+Configure miss: pcre2posix.h
+Configure miss: pcreposix.h
 Configure miss: tgetent
 Configure miss: whether environ is declared
 Configure miss: working ncursesw.h

@@ -6,10 +6,10 @@
 # autospec commit: 94c6be0
 #
 Name     : tig
-Version  : 2.5.11
-Release  : 25
-URL      : https://github.com/jonas/tig/releases/download/tig-2.5.11/tig-2.5.11.tar.gz
-Source0  : https://github.com/jonas/tig/releases/download/tig-2.5.11/tig-2.5.11.tar.gz
+Version  : 2.5.12
+Release  : 26
+URL      : https://github.com/jonas/tig/releases/download/tig-2.5.12/tig-2.5.12.tar.gz
+Source0  : https://github.com/jonas/tig/releases/download/tig-2.5.12/tig-2.5.12.tar.gz
 Summary  : Tig: text-mode interface for git
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -61,10 +61,10 @@ man components for the tig package.
 
 
 %prep
-%setup -q -n tig-2.5.11
-cd %{_builddir}/tig-2.5.11
+%setup -q -n tig-2.5.12
+cd %{_builddir}/tig-2.5.12
 pushd ..
-cp -a tig-2.5.11 buildavx2
+cp -a tig-2.5.12 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1738272790
+export SOURCE_DATE_EPOCH=1738881489
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -117,7 +117,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1738272790
+export SOURCE_DATE_EPOCH=1738881489
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tig
 cp %{_builddir}/tig-%{version}/COPYING %{buildroot}/usr/share/package-licenses/tig/4cc77b90af91e615a64ae04893fdffa7939db84c || :
